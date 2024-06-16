@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/index.css">
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+    <title>African fires</title>
+</head>
+<body>
+<h3>Список пожаров</h3>
+<div>
+    <form>
+        <input type="button" value="Следующий шаг" id="step">
+        <input type="button" value="Анимация" id="all">
+        <input type="button" value="Начать заново" id="start">
+    </form>
+    <svg></svg>
+</div>
+
+<div class="table">
+    <label> Выбор страны
+        <select id="selectCountry"></select>
+    </label>
+    <br>
+    <br>
+    <label>Сортировка по температуре
+        <select id="sortByTemperature">
+            <option value="none">Без сортировки</option>
+            <option value="ascending">По возрастанию</option>
+            <option value="descending">По убыванию</option>
+        </select>
+    </label>
+    <br>
+    <br>
+    <label>Сортировка по отн. влажности воздуха
+        <select id="sortByRH">
+            <option value="none">Без сортировки</option>
+            <option value="ascending">По возрастанию</option>
+            <option value="descending">По убыванию</option>
+        </select>
+    </label>
+    <br>
+    <br>
+    <input type="button" id="applyFilter" value="Применить">
+    <input type="button" id="showTable" value="Показать таблицу">
+    <table> </table>
+</div>
+</body>
+<script src="../assets/data/forest_fires.js"></script>
+<script src="../src/index.js"></script>
+</html>
